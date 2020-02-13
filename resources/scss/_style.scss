@@ -1,0 +1,930 @@
+.inspire-s {
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+    
+    @include ML {
+        padding: 70px 0;
+    }
+    
+    @include M {
+        padding: 60px 0;
+    }
+    @include S {
+        padding: 50px 0;
+    }
+    
+    .rnd-flower-2,
+    .rnd-flower-3 {
+	    position: absolute;
+        height: 55px;
+        width: auto;
+        z-index: 99;
+        @include L {
+            height: 50px;
+        }
+        @include M {
+            height: 35px;
+        }
+    }
+    
+    .rnd-flower-2 {
+        top: 4%;
+        left: 18%;
+        @include L {
+            top: 3%;
+            left: 15%;
+        }
+    }
+    
+    .rnd-flower-3 {
+	    top: 28%;
+        right: 8%;
+        @include L {
+            top: 25%;
+            right: 5%;
+        }
+        @include S {
+            top: 40%;
+        }
+    }
+    
+    
+}
+
+
+.icon-logo-s {
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+    @include L {
+        height: 38px;
+    }
+}
+
+.subtitle-text {
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80%;
+    font-weight: 400;
+    margin-bottom: 20px;
+    @include L {
+        font-size: 70%;
+    }
+    @include ML {
+        margin-bottom: 15px;
+    }
+    @include M {
+        font-size: 60%;
+    }
+}
+
+.section-title {
+    color: #1e2528;
+    font-size: 210%;
+    font-weight: 700;
+    margin-bottom: 30px;
+    @include L {
+        font-size: 190%;
+    }
+    @include ML {
+        font-size: 180%;
+        margin-bottom: 20px;
+    }
+    @include M {
+        font-size: 150%;
+        margin-bottom: 15px;
+    }
+}
+
+.section-description {
+	color: #888888;
+    font-size: 75%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 145%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    @include L {
+        font-size: 70%;
+        width: 70%;
+    }
+    @include ML {
+        font-size: 65%;
+    }
+    @include M {
+        font-size: 60%;
+    }
+}
+
+    
+.btn-3 {
+    &:link,
+    &:visited {
+        font-size: 65%;
+        color: #ffffff;
+        padding: 12px 28px;
+        border-radius: 20px;
+        background-color: $orange;
+        margin-top: 40px;
+        text-decoration: none;
+        transition: all 0.5s;
+        @include M {
+            font-size: 60%;
+        }
+    }
+    
+    &:hover,
+    &:active {
+        background-color: darken($orange, 10%);
+    }
+
+}
+
+
+.services-gallery {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    
+    .service-container {
+        flex-grow: 1;
+        width: 25%;
+        border: 1px solid #ffffff;
+        border-bottom: 0;
+        border-top: 0;
+        height: 420px;
+        &:nth-child(1) {
+            background:  url('../img/service-1.jpg');
+            background-size: cover;
+            background-position: center;
+            border-left: 0;
+        }
+        &:nth-child(2) {
+            background:  url('../img/service-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-child(3) {
+            background:  url('../img/service-3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-child(4) {
+            background:  url('../img/service-4.jpg');
+            background-size: cover;
+            background-position: center;
+            border-right: 0;
+        }
+        position: relative;
+        
+        overflow: hidden;
+        @include ML {
+            height: 350px;
+        }
+        @include M {
+            width: 50%;
+            border: 0;
+            height: 240px;
+        }
+        
+        
+        .service-info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 129, 126, 0.9);
+            
+            opacity: 0;
+            transition: all 0.3s;
+            
+            &:hover {
+                opacity: 1;
+            }
+            
+        }
+        
+        
+    }
+    
+    .service-icon {
+        width: 40px;
+        height: auto;
+        margin-top: 170px;
+        @include ML {
+            margin-top: 130px;
+        }
+        @include M {
+            margin-top: 80px;
+        }
+    }
+    
+    .service-title {
+        font-size: 80%;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+    
+    
+}
+
+
+.popular-procedures,
+.latest-blog {
+	text-align: center;
+    padding: 80px 0;
+    padding-top: 40px;
+    
+    @include ML {
+        padding-bottom: 70px;
+    }
+    
+    @include M {
+        padding-bottom: 60px;
+        padding-top: 30px;
+    }
+    
+    @include S {
+        padding-bottom: 50px;
+    }
+    
+    .section-title {
+        text-transform: capitalize;
+    }
+    
+    
+    .procedures-container {
+	    display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        
+        @include M {
+            flex-flow: column wrap;
+            align-items: center;
+        }
+        
+        .procedure-box {
+            width: 240px;
+            padding: 15px;
+            margin: 0 20px;
+            
+            box-shadow: 0 0 2px 0px #e3e6ea;
+            transition: all 0.3s;
+            
+            &:hover {
+                box-shadow: 0 2px 6px 6px #ebecef;
+            }
+            
+            @include ML {
+                width: 210px;
+                padding: 10px;
+                margin: 0px 16px;
+            }
+            
+            @include M {
+                width: 260px;
+                padding: 15px;
+                margin-bottom: 30px;
+            }
+            &:last-child {
+                @include M {
+                    margin-bottom: 0;
+                }
+            }
+            
+            .img-proc-box {
+                width: 100%;
+                height: 160px;
+                overflow: hidden;
+                position: relative;
+                .procedure-img {
+                    position: absolute;
+                    height: 110%;
+                    width: auto;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    
+                    &.exception-img {
+                        width: 110%;
+                        height: auto;
+                    }
+                }
+                
+            }
+            
+            .post-info {
+                font-size: 45%;
+                color: lighten($gray, 10%);
+                margin-top: 25px;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                
+            }
+            
+            .procedure-title {
+                font-size: 110%;
+                color: #263a41;
+                letter-spacing: 1px;
+                margin: 25px 0 15px 0;
+                @include M {
+                    font-size: 100%;
+                }
+                @include S {
+                    font-size: 90%;
+                }
+            }
+            
+            .procedure-description {
+	            color: lighten($medium-gray, 30%);
+                font-size: 60%;
+                line-height: 140%;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                @include M {
+                    font-size: 55%;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+                @include S {
+                    font-size: 50%;
+                }
+            }
+            
+            .btn-3 {
+                display: inline-block;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                &:link, &:visited {
+                    background-color: $dark-blue;  
+                    @include M {
+                        font-size: 55%;
+                    }
+                    @include S {
+                        font-size: 50%;
+                    }
+                }
+                &:hover, &:active {
+                    background-color: $orange;
+                }
+                
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+.latest-blog .procedures-container .procedure-box .procedure-title {
+	margin: 10px 15px;
+}
+
+
+.testimonials-section {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #fff9f8;
+    @include ML {
+        padding: 70px 0;
+    }
+    @include M {
+        padding: 60px 0;
+    }
+    @include S {
+        padding: 50px 0
+    }
+    
+    ion-icon {
+        color: $orange;
+        font-size: 48px;
+        display: inline-block;
+        margin-bottom: 40px;
+        
+    }
+    
+    .testimonials-container {
+        list-style: none;
+    }
+    
+    .testimonial-slide {
+        transition: all 0.3s;
+        &.tst-active {
+            opacity: 0;
+        }
+    }
+    
+    .testimonial-text {
+	    color: $dark-blue;
+        font-size: 80%;
+        line-height: 140%;
+        width: 80%;
+        margin: 0 auto;
+        @include M {
+            font-size: 70%;
+        }
+        @include S {
+            font-size: 65%;
+        }
+    }
+    
+    .testimonial-profile {
+        margin-top: 40px;
+        .tst-profile-photo {
+            border-radius: 50%;
+            width: 70px;
+            height: auto;
+            @include S {
+                width: 60px;
+            }
+        }
+        
+        .tst-profile-name {
+            font-size: 90%;
+            color: $dark-blue;
+            font-weight: 700;
+            @include S {
+                font-size: 80%;
+            }
+            
+        }
+        
+        .tst-profile-position {
+            font-size: 70%;
+            font-family: 'Roboto', sans-serif;
+            color: $gray;
+            @include S {
+                font-size: 60%;
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    .slider-bar {
+        text-align: center;
+        list-style: none;
+        margin-top: 40px;
+        li {
+            display: inline-block;
+            margin: 0 20px;
+            @include M{
+                margin: 0 16px;
+            }
+            @include S {
+                margin: 0 12px;
+            }
+            a {
+                &:link, &:visited {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: lighten($orange, 10%);
+                    transition: all 0.3s;
+                    display: inline-block;
+                }
+                &:hover, &:active {
+                    background-color: $orange;
+                }
+                &.active {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+}
+
+.experienced-team {
+	text-align: center;
+    padding: 80px 0;
+    
+    
+    
+    @include ML {
+        padding: 70px 0;
+    }
+    
+    @include M {
+        padding: 60px 0;
+    }
+    @include S {
+        padding: 50px 0;
+    }
+    
+}
+
+.team-container {
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+    
+    @include M {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    .team-member-box {
+	    width: 220px;
+        height: 360px;
+        margin: 0 20px;
+        position: relative;
+        transition: all 0.3s;
+        @include ML {
+            margin: 0 10px;
+        }
+        @include M {
+            margin-bottom: 60px;
+            width: 200px;
+            height: 320px;
+        }
+        @include S {
+            
+            width: 180px;
+            height: 270px;
+        }
+    }
+    
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    img {
+        position: absolute;
+        height: 102%;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.member-info {
+    position: absolute;
+    width: 80%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, 50px);
+    @include M {
+        transform: translate(-50%, 30px);
+        box-shadow: 0px 3px 2px  #efefef;
+    }
+    @include S {
+        padding: 12px;
+    }
+    transition: all 0.3s;
+    
+    .member-name {
+        font-size: 80%;
+        color: $dark-blue;
+        font-weight: 700;
+        @include M {
+            font-size: 70%;
+        }
+        @include S {
+            font-size: 65%;
+        }
+    }
+    
+    .member-poisiton {
+        font-size:65%;
+        color: $gray;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        @include S {
+            font-size: 60%;
+        }
+    }
+    
+}
+
+
+.member-social-links {
+	list-style: none;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+    @include M {
+        opacity: 1;
+    }
+    li {
+        display: inline-block;
+        margin: 0 5px;
+        a {
+            &:link, &:visited {
+                font-size: 80%;
+                color: $gray;
+                text-decoration: none;
+                transition: all 0.5s;
+                @include S {
+                    font-size: 70%;
+                }
+            }
+            
+            &:hover, &:active {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.team-member-box:hover {
+    
+    .member-info {
+        
+        transform: translate(-50%, 30px);
+        box-shadow: 0px 3px 2px  #efefef;
+    }
+    
+    .member-social-links  {
+        opacity: 1;
+        transition: all 0.3s;
+    }
+}
+
+
+
+
+.appointment {
+    padding: 40px 0;
+    
+}
+
+.appointment-container {
+    display: flex;
+    flex-flow: row wrap;
+    
+    @include M {
+        flex-flow: column wrap;
+    }
+    
+    .appointment-image {
+	    width: 40%;
+        height: 500px;
+        
+        background-image: url('../img/appointment.jpg');
+        background-size: cover;
+        background-position: center;
+        
+        @include M {
+            width: 100%;
+            height: 200px;
+        }
+        
+    }
+    
+    .appointment-form {
+        width: 60%;
+        background-color: #fff9f8;
+        padding: 80px 60px;
+        height: 500px;
+        
+        @include ML {
+            padding: 60px 40px;
+        }
+        
+        @include M {
+            width: 100%;
+            height: auto;
+        }
+        
+        .form-row {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            
+            @include ML {
+                width: 100%;
+            }
+            
+            @include S {
+                flex-flow: column wrap;
+            }
+            
+            input {
+                width: 47%;
+                margin-bottom: 40px;
+                background-color: transparent;
+                border: 0;
+                padding-bottom: 12px;
+                font-size: 75%;
+                border-bottom: 1px solid $gray;
+                transition: all 0.3s;
+                
+                
+                &:focus {
+                    outline: 0;
+                    border-bottom: 1px solid $orange;
+                }
+                
+                
+                @include S {
+                    width: 100%;
+                    font-size: 60%;
+                }
+                
+            }
+            
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+            /* Firefox */
+            input[type=number] {
+              -moz-appearance:textfield;
+            }
+            
+            textarea {
+                width: 100%;
+                
+                background-color: transparent;
+                border: 0;
+                padding-bottom: 12px;
+                font-size: 75%;
+                border-bottom: 1px solid $gray;
+                resize: vertical;
+                
+                min-height: 35px;
+                
+                &:focus {
+                    outline: 0;
+                    border-bottom: 1px solid $orange;
+                }
+                
+                
+                @include S {
+                    font-size: 60%;
+                    min-height: 25px;
+                }
+            }
+            
+        }
+        
+        .appointment-btn {
+            display: inline-block;
+        }
+        
+    }
+    
+}
+
+
+.contact {
+    padding-bottom: 80px;
+    
+    .contact-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+        @include M {
+            width: 80%;
+            margin: 0 auto;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+        
+    
+    
+    }
+    @include ML {
+        padding: 70px 0;
+    }
+    
+    @include M {
+        padding: 60px 0;
+    }
+    @include S {
+        padding: 50px 0;
+    }
+    
+}
+
+.contact-infos {
+    
+    
+    @include M {
+        width: 100%;
+        order: 2;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+.info-box {
+	display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 35px;
+    &:first-child {
+        margin-top: 10px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    ion-icon {
+        margin-right: 14px;
+        font-size: 130%;
+        color: $orange;
+    }
+}
+
+
+.info-content {
+	font-size: 70%;
+    font-family: 'Roboto', sans-serif;
+    @include M {
+        font-size: 60%;
+    }
+}
+
+.contact-form {
+	width: 30%;
+    margin-left: 80px;
+    
+    @include ML {
+        width: 40%;
+    }
+    
+    @include M {
+        order: 1;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .contact-input, textarea {
+        margin-bottom: 30px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 60%;
+        transition: all 0.3s;
+        border: 1px solid $gray;
+        &:focus,
+        &:hover {
+            outline: 0;
+            border: 1px solid $orange;
+        }
+    }
+    
+    textarea {
+        margin-bottom: 0;
+        resize: vertical;
+        min-height: 30px;
+    }
+    
+    .submit-button {
+        font-size: 65%;
+        color: #ffffff;
+        padding: 12px 28px;
+        border: 0;
+        border-radius: 20px;
+        background-color: $orange;
+        margin-top: 40px;
+        text-decoration: none;
+        transition: all 0.5s;
+        display: inline-block;
+        &:hover,
+        &:active {
+            background-color: darken($orange, 10%);
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
